@@ -19,7 +19,19 @@ struct CurrentWeather {
 
 extension CurrentWeather {
     var iconImage: UIImage {
-        return UIImage(imageLiteralResourceName: icon)
+        switch icon {
+        case "clear-day": return #imageLiteral(resourceName: "clear-day")
+        case "clear-night": return #imageLiteral(resourceName: "clear-night")
+        case "rain": return #imageLiteral(resourceName: "rain")
+        case "snow": return #imageLiteral(resourceName: "snow")
+        case "sleet": return #imageLiteral(resourceName: "sleet")
+        case "wind": return #imageLiteral(resourceName: "wind")
+        case "fog": return #imageLiteral(resourceName: "fog")
+        case "cloudy": return #imageLiteral(resourceName: "cloudy")
+        case "partly-cloudy-day": return #imageLiteral(resourceName: "partly-cloudy-day")
+        case "partly-cloudy-night": return #imageLiteral(resourceName: "partly-cloudy-night")
+        default: return #imageLiteral(resourceName: "default") //ensures we never have a situation where an icon isn't visible.
+        }
     }
     
 }

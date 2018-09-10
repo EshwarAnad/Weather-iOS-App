@@ -13,17 +13,19 @@
 		6D3EC94721467553007FB9CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3EC94621467553007FB9CD /* Assets.xcassets */; };
 		6D3EC94A21467553007FB9CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D3EC94821467553007FB9CD /* LaunchScreen.storyboard */; };
 		6D3EC95221469948007FB9CD /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC95121469948007FB9CD /* CurrentWeather.swift */; };
+		6D3EC9542146A0B7007FB9CD /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3EC9532146A0B7007FB9CD /* CurrentWeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6D3EC93C21467552007FB9CD /* Weather-iOS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-iOS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D3EC93F21467553007FB9CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D3EC93F21467553007FB9CD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D3EC94121467553007FB9CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D3EC94421467553007FB9CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D3EC94621467553007FB9CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D3EC94921467553007FB9CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D3EC94B21467553007FB9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D3EC95121469948007FB9CD /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		6D3EC9532146A0B7007FB9CD /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6D3EC94821467553007FB9CD /* LaunchScreen.storyboard */,
 				6D3EC94B21467553007FB9CD /* Info.plist */,
 				6D3EC95121469948007FB9CD /* CurrentWeather.swift */,
+				6D3EC9532146A0B7007FB9CD /* CurrentWeatherViewModel.swift */,
 			);
 			path = "Weather-iOS-App";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				6D3EC94221467553007FB9CD /* ViewController.swift in Sources */,
 				6D3EC95221469948007FB9CD /* CurrentWeather.swift in Sources */,
 				6D3EC94021467553007FB9CD /* AppDelegate.swift in Sources */,
+				6D3EC9542146A0B7007FB9CD /* CurrentWeatherViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
