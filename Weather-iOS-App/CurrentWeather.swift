@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct CurrentWeather {
+struct CurrentWeather: Codable {
     let temperature: Double
     let humidity: Double
     let precipProbability: Double
@@ -30,8 +30,9 @@ extension CurrentWeather {
         case "cloudy": return #imageLiteral(resourceName: "cloudy")
         case "partly-cloudy-day": return #imageLiteral(resourceName: "partly-cloudy-day")
         case "partly-cloudy-night": return #imageLiteral(resourceName: "partly-cloudy-night")
-        default: return #imageLiteral(resourceName: "default") //ensures we never have a situation where an icon isn't visible.
+        default: return #imageLiteral(resourceName: "default")
         }
     }
-    
 }
+
+

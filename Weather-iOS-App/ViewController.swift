@@ -17,14 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentSummaryLabel: UILabel!
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
+    
+    let client = WeatherAPIClient()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let currentWeather = CurrentWeather(temperature: 85.0, humidity: 0.8, precipProbability: 0.1, summary: "Hot!", icon: "clear-day")
-        let viewModel = CurrentWeatherViewModel(model: currentWeather)
-        
-        displayWeather(using: viewModel)
+        getCurrentWeather()
     }
     
     func displayWeather(using viewModel: CurrentWeatherViewModel) {
@@ -34,6 +32,29 @@ class ViewController: UIViewController {
         currentSummaryLabel.text = viewModel.summary
         currentWeatherIcon.image = viewModel.icon
     }
+
+    @IBAction func getCurrentWeather() {
+        toggleRefreshAnimation(on: true)
+        
+        client.getCurrentWeather(at: Coordinate.alcatrazIsland) { [unowned self] currentWeather, error in
+            if let currentWeather = currentWeather {
+                let viewModel = CurrentWeatherViewModel(model: currentWeather)
+                self.displayWeather(using: viewModel)
+                self.toggleRefreshAnimation(on: false)
+            }
+        }
+    }
+    
+    func toggleRefreshAnimation(on: Bool) {
+        refreshButton.isHidden = on
+        
+        if on {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
+    
 }
 
 

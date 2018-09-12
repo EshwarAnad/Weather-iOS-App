@@ -18,8 +18,7 @@ struct CurrentWeatherViewModel {
 
     
     init(model: CurrentWeather) {
-        //converts Fahrenheit to Celcius and rounds number.
-        let roundedTemperature = Int(5.0 / 9.0 * (model.temperature - 32.0))
+        let roundedTemperature = Int(model.temperature)
         self.temperature = "\(roundedTemperature)º"
         
         let humidityPercentValue = Int(model.humidity * 100)
@@ -29,8 +28,6 @@ struct CurrentWeatherViewModel {
         self.precipitationProbability = "\(precipitationPercentValue)%"
         
         self.summary = model.summary
-        
-        //Should not be in the ViewModel? 
         self.icon = model.iconImage
     }
 }
